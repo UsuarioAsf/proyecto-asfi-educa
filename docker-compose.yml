@@ -42,7 +42,7 @@ services:
     image: wordpress:php7.4-apache
     ports:
       - 8888:80
-      - 443:443
+      # - 443:443
     environment:
        WORDPRESS_DB_HOST: db
        WORDPRESS_DB_USER: wp-user
@@ -52,3 +52,9 @@ services:
     container_name: wordpress-site
     networks:
       - wp-back
+  client:
+    image: nginx:1.23.1
+    ports:
+        - 8080:80
+    volumes:
+        - ./src:/usr/share/nginx/html
