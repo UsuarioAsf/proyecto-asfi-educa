@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        <meta name="description" content="Jugar memorama en línea">
+        <title>Memoria</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>   
+        <main role="main" class="container" id="app">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class=" text-center" id="title" style="color:rgb(26, 87, 118)"><b> Juego de memoria</b></h1>
+                    <p>
+                        <span class="h2" style="color: rgb(26, 87, 118);">Intentos: </span> 
+                        <span class="h2" style="color: rgb(77, 175, 143);">{{intentos}}/{{MAXIMOS_INTENTOS}}&nbsp;</span>
+                        <span class="h2" style="color: rgb(26, 87, 118);">Aciertos:</span>
+                        <span class="h2" style="color: rgb(62, 185, 179);">{{aciertos}}</span>
+                        
+                    </p>
+                </div>
+            </div>
+            <div v-for="(fila, indiceFila) in memorama" :key="indiceFila"
+                class="row">
+                <div :key="indiceFila+''+indiceImagen" class="col-3"
+                    v-for="(imagen, indiceImagen) in fila" style="text-align: center;">
+                    <div class="mb-3">
+                        <img @click="voltear(indiceFila, indiceImagen)"
+                            :class="{'girar': imagen.mostrar}"
+                            :src="(imagen.mostrar ? imagen.ruta :
+                            NOMBRE_IMAGEN_OCULTA)" class="card-img-top img-fluid
+                    ">
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script src="./js/sweetalert2.all.min.js"></script>
+        <script src="./js/vue.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

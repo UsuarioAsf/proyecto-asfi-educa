@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--======  meta tags ======-->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--====== Title ======-->
+  <title>Presupuesto Familiar</title>
+
+
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" href="assets2/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="assets2/css/controlador.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section id="pg0" class="header-area header-eight" style="background: rgb(26, 87, 118);">
+
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="header-content">
+          <h1 style="text-align: center;">PRESUPUESTO FAMILIAR.</h1>
+          <br>
+          <h4 style="color: white; text-align: justify;margin-left: 45px;margin-right: 45px">
+            Desde aqui podras proyectar tus ingresos (por ejemplo, aquellos que
+            obtendremos a través de nuestro empleo o negocios) y egresos,
+            como los gastos para cubrir necesidades familiares o el pago de deudas.
+
+          </h4>
+          <div class="button" style="text-align: center;">
+            <a href="#pg1" class="btn colorBoton" style="background-color: rgb(45, 184, 171);">Iniciemos!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="header-image">
+          <img src="assets/images/calculadora.png" alt="#" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--====== INGRESOS ======-->
+
+  <section id="pg1" class="about-area about-five">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-12">
+          <div class="about-five-content">
+            <div class="about-five-tab">
+              <div class="col-xl-15">
+                <div class="contact-form-wrapper">
+                  <div class="row">
+                    <div class="col-xl-10 col-lg-8 mx-auto">
+                      <div class="section-title text-center">
+                        <h2>
+                          INGRESOS FAMILIARES
+                        </h2>
+                        <br>
+                        <h3>
+                          Frecuencia - Monto
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <form action="#" class="contact-form" onsubmit="calcu();window.location.href='#pg2';return false;">
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado ">
+                        <span>Ingresos Esposo:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6 espaciado">
+                        <select name="moneda" id="p1" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6 espaciado">
+                        <!-- <label for="quantity"></label> -->
+                        <!-- <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="monto"><br><br> -->
+                        <!-- <input type="submit"> -->
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n11" placeholder="Monto"  style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Ingresos Esposa:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6 espaciado">
+                        <select name="moneda" id="p2" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6 espaciado">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n22" placeholder="Monto" 
+                           style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+
+                        <!-- <input type="number" name="monto" id="n22" placeholder="Monto" 
+                          style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" /> -->
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Otros Ingresos:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6 espaciado">
+                        <select name="moneda" id="p3" class="form-select rounded-pill selectcolor  ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6 espaciado">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n33" placeholder="Monto" 
+                       style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+
+                        <!-- <input type="number" name="monto" id="n33" placeholder="Monto" 
+                          style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" /> -->
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <span>TOTAL INGRESOS:</span>
+                      </div>
+                      <div class="col-6">
+                        <td>
+                          <span id="spm33"></span>
+                        </td>
+                      </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="text-center">
+                          <input type="submit" class="btn rounded-pill colorBoton" id="calcular"
+                            value="Validar / Continuar"> </input>
+                          <!-- <a href="#pg2" class="btn rounded-pill colorBoton" id="calcular" 
+                            onclick="calcu(), document.getElementById('pg2').style.display='block';">Calcular</a> -->
+                          <a href="#pg0" onclick="if(!verificarPanel1()) event.preventDefault();"
+                            class="btn colorBoton rounded-pill col-12">atras</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-5 col-12">
+          <div class="about-image-five">
+            <img src="assets2/images/about/about-img1.jpg" alt="about" />
+          </div>
+        </div>
+
+      </div>
+      <!-- container -->
+  </section>
+
+  <!--====== EGRESOS ======-->
+  <section id="pg2" class="about-area about-five" style="display: none;">
+    <div class="container">
+      <div class="row align-items-center">
+
+
+        <div class="col-lg-7 col-12">
+          <div class="about-five-content">
+            <div class="about-five-tab">
+              <div class="col-xl-15">
+                <div class="contact-form-wrapper">
+                  <div class="row">
+                    <div class="col-xl-10 col-lg-8 mx-auto">
+                      <div class="section-title text-center">
+                        <h2>
+                          GASTOS FAMILIARES
+                        </h2>
+                        <br>
+                        <h3>
+                          Frecuencia - Monto
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#" class="contact-form" onsubmit="calcu2();return false;">
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Gastos de alimentacion:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p4" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n99" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Servicio Basico (Luz):</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="disabledSelect" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number"min="0" max="10000000000000000000000" name="monto" id="n98" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Servicio Basico (Agua):</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="disabledSelect" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n97" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Servicio Basico (Telefono):</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="disabledSelect" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n96" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Gastos de Transporte:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p5" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n95" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Gastos de Educacion:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p6" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n94" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Gastos de Vestimenta:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p7" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n93" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Recreacion de Gastos:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p8" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n92" placeholder="Monto" 
+                         style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-12 espaciado">
+                        <span>Cuota de Credito:</span>
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-6">
+                        <select name="moneda" id="p9" class="form-select rounded-pill selectcolor ">
+                          <option value="M">Mensual</option>
+                          <option value="s">Semanal</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" min="0" max="10000000000000000000000" name="monto" id="n91" placeholder="Monto" 
+                          style="border-color: #8B758B;margin: auto;padding-left: 15px;padding-right: 15px;" />
+                      </div>
+                    </div>
+
+                    <div class="row espaciadoFila">
+                      <div class="col-5 espaciado">
+                        <span>TOTAL GASTOS:</span>
+                      </div>
+                      <div class="col-7">
+                        <span id="r99"></span>
+                      </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="text-center">
+                          <input type="submit" class="btn rounded-pill colorBoton" id="calcular"
+                            value="Validar / Continuar" onclick="document.getElementById('pg3').style.display='block';window.location.href='#pg3';"> </input>
+                          <!-- <a href="#pg3" class="btn colorBoton rounded-pill" id="calcular2"
+                            onclick="calcu2(), document.getElementById('pg3').style.display='block';">Calcular</a> -->
+                          <a href="#pg1" onclick="if(!verificarPanel1()) event.preventDefault();"
+                            class="btn colorBoton rounded-pill col-12">atras</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-12">
+          <div class="about-image-five">
+            <img src="assets2/images/about/about-img1.jpg" alt="about" />
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!--====== PRESUPUESTO FAMILIAR ======-->
+  <section id="pg3" style="display: none;" class="about-area about-five">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-12">
+          <div class="about-five-content">
+            <div class="about-five-tab">
+              <div class="col-xl-15">
+                <div class="contact-form-wrapper">
+                  <div class="row">
+                    <div class="col-xl-10 col-lg-8 mx-auto">
+                      <div class="section-title text-center">
+                        <h2>
+                          PRESUPUESTO FAMILIAR
+                        </h2>
+                        <br>
+                        <h3>
+                          Mensual - Anual
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="3" id="tit1">INGRESO FAMILIAR</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">Ingresos Esposo:</td>
+                        <td id="spm1"></td>
+                        <td id="spa1"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Ingresos Esposa:</td>
+                        <td id="spm2"></td>
+                        <td id="spa2"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Otros Ingresos:</td>
+                        <td id="spm3"></td>
+                        <td id="spa3"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Total Ingresos:</th>
+                        <td id="r2"></td>
+                        <td id="spa33"></td>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="3" id="tit1">GASTO FAMILIAR</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td scope="row">Gasto de alimentacion:</td>
+                        <td id="spm4"></td>
+                        <td id="spa4"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Servicio Basico (Luz):</td>
+                        <td id="spm5"></td>
+                        <td id="spa5"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Servicio Basico (Agua):</td>
+                        <td id="spm6"></td>
+                        <td id="spa6"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Servicio Basico (Telefono):</td>
+                        <td id="spm7"></td>
+                        <td id="spa7"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Gasto de Transporte:</td>
+                        <td id="spm8"></td>
+                        <td id="spa8"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Gasto de Educacion:</td>
+                        <td id="spm9"></td>
+                        <td id="spa9"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Gasto de Vestimenta:</td>
+                        <td id="spm10"></td>
+                        <td id="spa10"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Recreacion y Otros:</td>
+                        <td id="spm11"></td>
+                        <td id="spa11"></td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Cuota de Credito:</td>
+                        <td id="spm12"></td>
+                        <td id="spa12"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Total GASTOS:</th>
+                        <td id="rm22"></td>
+                        <td id="ra99"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">AHORRO:</th>
+                        <th id="tot"></th>
+                        <th id="totAnu"></th>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="text-center">
+                        <a href="#pg2" onclick="if(!verificarPanel1()) event.preventDefault();"
+                          class="btn colorBoton rounded-pill">atras</a>
+                        <!-- <a href="#pg4" onclick="if(!verificarPanel1()) event.preventDefault();"
+                          class="btn colorBoton rounded-pill">Importancia de ahorro</a> -->
+                        <a href="#pg4" onclick="document.getElementById('pg4').style.display='block';"
+                          class="btn colorBoton rounded-pill">Importancia de ahorro</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-12">
+          <div class="about-image-five">
+            <img src="assets2/images/about/about-img1.jpg" alt="about" />
+          </div>
+        </div>
+
+      </div>
+      <!-- container -->
+  </section>
+
+  <!--====== INFORMACION GENERAL ======-->
+  <section id="pg4" style="display: none;" class="about-area about-five">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-24">
+          <div class="about-five-content">
+            <div class="about-five-tab">
+              <div class="col-xl-15">
+                <div class="contact-form-wrapper">
+                  <div class="row">
+                    <div class="col-xl-10 col-lg-8 mx-auto">
+                      <div class="section-title text-center">
+                        <h2>
+                          IMPORTANCIA DEL AHORRO
+                        </h2>
+                        <br>
+                        <h3>
+                          ✔ Fortalezca la capacidad de generar ingresos
+                          <br>
+                          ✔ Adopte una cultura de ahorro
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table table-hover">
+                    <tbody>
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="2" id="tit1">Cuando INGRESOS sea > a GASTOS</th>
+                          <th scope="col" colspan="2" id="tit1">Cuando INGRESOS sea < a GASTOS</th>
+                        </tr>
+                      </thead>
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="2" id="tit1">AHORRO CORRIENTE | AHORRO PERMANENTE</th>
+                          <th scope="col" colspan="2" id="tit1">ENDEUDAMIENTO RECURRENTE | SOBREENDEUDAMIENTO</th>
+                        </tr>
+                      </thead>
+
+                      <tr>
+                        <td>* Posibilidad de mayor tendencia de bienes duraderos</td>
+                        <td></td>
+                        <td>* Inestabilidad economica y posibilidad de crisis</td>
+                      </tr>
+
+                      <tr>
+                        <td>* Posibilidad de de invertir en mejor educación</td>
+                        <td></td>
+                        <td>* Perdida de confianza entre entes familiares y financieras</td>
+                      </tr>
+
+                      <tr>
+                        <td>* Posibilidad de afrontar eventualidades negativas</td>
+                        <td></td>
+                        <td>* Imposibilidad de afrontar eventualidades negativas</td>
+                      </tr>
+
+                      <tr>
+                        <td>* Posibilidad de endeudamiento razonable</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="text-center">
+                        <a href="#pg1" onclick="if(!verificarPanel1()) event.preventDefault();"
+                          class="btn colorBoton rounded-pill">VOLVER A CALCULAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+  </section>
+
+
+  <a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"><img src="assets2/images/about/subir.png" alt="about" /></i>
+  </a>
+
+  <!--====== js ======-->
+  <script src="assets2/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets2/js/prueba1.js"></script>
+  <style>
+    .colorBoton {
+      background-color: rgb(26 87 118);
+      color: white;
+    }
+  </style>
+
+</body>
+
+</html>

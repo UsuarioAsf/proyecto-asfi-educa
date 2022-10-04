@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Juego Operaciones Aritmeticas</title>
+</head>
+
+<body>
+    <h1 class="text-center" style="color:rgb(26, 87, 118)"><b>Juego de Operaciones Matemáticas</b></h1>
+    <br>
+    <br>
+     <h2 style="text-align: center;">Seleciona el tipo de operación:</h2>
+     <br>
+    <div class="container">
+      
+       
+        <section class="container-operadores">
+            <button id="suma" onclick="btnSumar()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="resta" onclick="btnResta()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button id="producto" onclick="btnProducto()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button id="division" onclick="btnDivision()">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+        </section>
+
+
+    </div>
+    <br>
+    <br>
+    
+    <section id="seccion2" class="container-operacion" style="display: none;">
+        <h3 class="text-danger" style="text-align: left;">Iniciemos!!</h3>
+        <span id="num1"></span>
+        <span id="operacion"></span>
+        <span id="num2"></span>
+        <span> = </span>
+        <input type="text" id="respuesta_usuario">
+        <button id="corregir" onclick="corregir()">Corregir</button>
+
+    </section>
+
+    <section id="msj_correccion">
+
+    </section>
+    <script src="script.js"></script>
+
+</html>

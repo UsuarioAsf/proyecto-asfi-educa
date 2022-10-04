@@ -1,0 +1,74 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+
+}
+
+
+.inputTabla {
+    width: 100px;
+    border: 1px solid #A1918E;
+    text-align: center;
+}
+
+.espaciado {
+    margin: auto;
+}
+
+.espaciadoFila {
+    padding: 10px;
+}
+
+.bbb {
+    position: relative;
+    /* font-size: 16px; */
+    /* font-family: helvetica, arial, sans-serif; */
+}
+
+.bbb span {
+    position: relative;
+    display: none;
+}
+
+.bbb:hover>span {
+    position: absolute;
+    top: 0;
+    left: 75px;
+    display: block;
+    background: #49B5AE;
+    color: white;
+
+    padding: 7px 12px;
+    border: #1A5776 4px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+    /* padding: 3px 10px;
+    border: PowderBlue 5px dashed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+.bbb:hover>span:after {
+    right: 100%;
+    top: 9%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #1A5776;
+    border-width: 12px;
+    margin-top: -6px;
+}
+
+.bbb:hover {
+    color: red !important;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego ahorcado</title>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main >
+        <h1 class="text-center" style="color:rgb(26, 87, 118)"><b>Juego del ahorcado</b></h1>
+        <br>
+        <div class="row" id="app" style="margin-right: 5%;">
+            <div class="col-12 text-center col-md-6">
+                <p class="h4 text-danger"><br> Intentos restantes: {{remainingAttempts}}</p>
+                <br>
+                <img class="img-fluid" :src="imagePath()" alt="">
+                <br>
+            </div>
+            <div class="col-12 text-center col-md-6">
+                <br>
+                <h3 id="idPregunta" class="displayed-word">_____ <br></h3>
+                <h3 class="displayed-word"><br>Palabra: <br>{{displayWord()}}</h3>
+                <br>
+                <button :disabled="letter.disabled" @click="attemptWithLetter(letter.letter)" v-for="letter in letters"
+                    class="btn m-1 btn-lg" style="background-color:rgb(26, 87, 118); color: white;font-size: 1.7rem;">{{letter.letter}}</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+<script src="js/vue.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/game.js"></script>
+
+</html>
