@@ -14,7 +14,7 @@ const juego = () => {
     const centroX = 200, centroY = 200;
     const radioCirculo = 200;
     const radioCuarto = 170;
-    const radioCirculoCentral = 80;
+    const radioCirculoCentral = 50;
     const distancia = 10;
     const gamma = 2;
     const milisegundosCpu = 200,
@@ -29,12 +29,18 @@ const juego = () => {
     let puntaje = 0;
     let secuencia = [];
 
-    const verde = d3.color("#1B5E20"),
-        rojo = d3.color("#B71C1C"),
-        amarillo = d3.color("#F9A825"),
+    const turquesa = d3.color("#4DAF8F"),
+        grisClaro = d3.color("#D8D8D8"),
+        celeste = d3.color("#6C6C6C"),
         azul = d3.color("#0D47A1"),
-        negro = d3.color("#212121");
+        negro = d3.color("#000000 ");
+        // background-color: rgb(26, 87, 118)
 
+        // const turquesa = d3.color("#4DAF8F"),
+        // grisClaro = d3.color("#D8D8D8"),
+        // celeste = d3.color("#30B8AD"),
+        // azul = d3.color("#0D47A1"),
+        // negro = d3.color("#2A567B");
 
     const circuloFondo = d3.arc()
         .innerRadius(0)
@@ -71,7 +77,7 @@ const juego = () => {
                 .startAngle(partidoEn16 * 12)
                 .endAngle(partidoEn16 * 16)
         )
-        .attr("fill", verde);
+        .attr("fill", turquesa);
 
 
     const superiorDerecha = $svg.append("g")
@@ -85,7 +91,7 @@ const juego = () => {
                 .startAngle(0)
                 .endAngle(partidoEn16 * 4)
         )
-        .attr("fill", rojo);
+        .attr("fill", grisClaro);
     const inferiorIzquierda = $svg.append("g")
         .attr("transform", `translate(${centroX - distancia},${centroY + distancia})`)
         .attr("class", "boton")
@@ -97,7 +103,7 @@ const juego = () => {
                 .startAngle(partidoEn16 * 8)
                 .endAngle(partidoEn16 * 12)
         )
-        .attr("fill", amarillo);
+        .attr("fill", celeste);
 
     const inferiorDerecha = $svg.append("g")
         .attr("transform", `translate(${centroX + distancia},${centroY + distancia})`)

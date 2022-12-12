@@ -374,9 +374,6 @@ function generarTabla(linkX) {
       fila = "";
 
 
-
-
-
       //console.log(nroCuota + "\t\t" + interesDeCuota.toFixed(2) + "  \t\t" + interesAcumulado.toFixed(2) + "\t\t" + pago.toFixed(2) + "\t\t\t" + pagoProgramado.toFixed(2) + "\t\t\t" + deuda.toFixed(2));
 
 
@@ -448,7 +445,7 @@ function validacionMonto() {
    if (this.id == "plazo_mes" || this.id == "plazo_año") {
       let x = document.querySelector('#' + this.id);
       if ((this.id == "plazo_mes" && (x.value < 0 || x.value > 12))
-         || (this.id == "plazo_año" && (x.value < 0 || x.value > 40))) {
+         || (this.id == "plazo_año" && (x.value < 0 || x.value > 6))) {
          x.style.borderColor = '#FF5733';
          document.querySelector('#' + 'titulo' + this.id).style.display = "block";
          totalTime = 3;
@@ -545,7 +542,7 @@ function cuentaRegresiva1(origen) {
          setTimeout("cuentaRegresiva1('plazo_mes')", 1000);
       }
       if (origen == "plazo_año") {
-         document.querySelector('#titulo' + origen).innerText = ("Dato no valido\nRango permitido\n0-40");
+         document.querySelector('#titulo' + origen).innerText = ("Dato no valido\nRango permitido\n0-6");
          setTimeout("cuentaRegresiva1('plazo_año')", 1000);
       }
       if (origen == "txtPeriodoGracia") {

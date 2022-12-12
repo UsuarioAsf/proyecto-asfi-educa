@@ -16,6 +16,7 @@ body {
     margin: auto;
     padding: 20px;
     text-align: center;
+    border-radius: 70px;
 }
 
 .container-operadores {
@@ -29,9 +30,11 @@ body {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     cursor: pointer;
     transition: .5s;
+    background: #b6b6b6;
+    color: white;
 }
 
 .container-operadores button:hover {
@@ -61,13 +64,14 @@ body {
 }
 
 #corregir {
-    background-color: rgb(77, 175, 143);
+    background-color: rgb(182, 182, 182);
+    color: white;
     border: none;
     font-size: 23px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 10px;
     transition: .5s;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
